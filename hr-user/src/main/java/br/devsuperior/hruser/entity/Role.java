@@ -9,15 +9,16 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="tb_role")
+@Table(name = "tb_role")
 public class Role implements Serializable {
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String roleName;
 	
 	public Role() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Role(Long id, String roleName) {
@@ -42,8 +43,6 @@ public class Role implements Serializable {
 		this.roleName = roleName;
 	}
 
-	
-	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -68,11 +67,4 @@ public class Role implements Serializable {
 			return false;
 		return true;
 	}
-
-	
-
-	
-	
-	
-
 }
